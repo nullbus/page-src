@@ -1,4 +1,8 @@
 
+export const config = {
+  unstable_runtimeJS: false
+};
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-center">

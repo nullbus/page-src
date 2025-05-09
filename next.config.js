@@ -1,6 +1,10 @@
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+    enabled: process.env.ANALYZE === 'true',
+});
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const config = {
     exportPathMap: function () {
         return {
             '/': { page: '/' }
@@ -8,3 +12,5 @@ module.exports = {
     },
     output: "export",
 };
+
+module.exports = withBundleAnalyzer(config);
